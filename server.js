@@ -1,6 +1,9 @@
 var express = require('express');
+const cors = require('cors');
 var app = express();
 const connection = require('./connection');
+
+app.use(cors());
 
 app.get('/favicon.ico', (req, res) => { return; })
 
